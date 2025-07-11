@@ -63,7 +63,12 @@
         "command": "generate_workflow",
         "description": "Generates a ComfyUI workflow JSON from an AI-provided abstract description. Parameters: ai_workflow_description (string, required).",
         "example": "<<<[TOOL_REQUEST]>>>\\ntool_name:「始」VCPComfyUIPlugin「末」,\\ncommand:「始」generate_workflow「末」,\\nai_workflow_description:「始」{\\\"nodes\\\":[{\\\"ai_node_id\\\":\\\"loader\\\",\\\"class_type\\\":\\\"CheckpointLoaderSimple\\\",\\\"inputs\\\":{\\\"ckpt_name\\\":\\\"v1-5-pruned-emaonly.safetensors\\\"}}]}「末」\\n<<<[END_TOOL_REQUEST]>>>"
+      },
+      {
+        "command": "describe_node",
+        "description": "Gets detailed information about a specific ComfyUI node, including its required and optional inputs, and its outputs. Parameter: node_class_type (string, required).",
+        "example": "<<<[TOOL_REQUEST]>>>\\ntool_name:「始」VCPComfyUIPlugin「末」,\\ncommand:「始」describe_node「末」,\\nnode_class_type:「始」KSampler「末」\\n<<<[END_TOOL_REQUEST]>>>"
       }
     ]
   }
-} 
+}
